@@ -77,12 +77,6 @@ export function PageHero({ kicker, title, description, imageId, compact = false 
           </motion.p>
         }
       </motion.div>
-
-      {image.isSample &&
-      <div className="absolute bottom-5 right-5">
-          <PlaceholderBadge label="Sample photo" tone="dark" />
-        </div>
-      }
     </section>);
 
 }
