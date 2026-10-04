@@ -28,7 +28,9 @@ export function HeroSection() {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
 
-  const slides = imageSlots.hero.map(getImage);
+  const slides = imageSlots.hero
+    .filter((_, imageIndex) => imageIndex !== 1)
+    .map(getImage);
 
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
